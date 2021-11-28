@@ -18,18 +18,23 @@ public class Graphs {
             raw_graph.add(row);
             if(!unique_vertices.containsValue(row[0])){
               unique_vertices.put(r,row[0]);
+              r++;
             }
             if(!unique_vertices.containsValue(row[1])){
-              unique_vertices.put(r+1,row[1]);
+              unique_vertices.put(r,row[1]);
+              r++;
             }
            
-            r++;
+           
         }
+        //System.out.println("R-----"+r);
         ArrayList<Integer> out = new ArrayList<Integer>();
         Graphs gr = new Graphs();
         BFSTraversal trv = new BFSTraversal();
         out = trv.Traversal(gr.matrixGraph());
-        System.out.println(out);
+        System.out.println("BFS Traveral of Graph "+out);
+        APSP apsp = new APSP();
+        //apsp.floydWarshall(gr.matrixGraph());
     }
 
     public Edges[][] matrixGraph(){
@@ -65,13 +70,13 @@ public class Graphs {
                break;
              }
            }
-           System.out.println("SIZE of X ,Y:::"+x+" "+y);
+           //System.out.println("SIZE of X ,Y:::"+x+" "+y);
           graph[x][y] = e;
           k++;
       }
     /*for(int i=0;i<noOfVertices;i++){
         for(int j=0;j<noOfVertices;j++){
-          System.out.print(graph[i][j]+" ");
+          System.out.print(graph[i][j].weight+" ");
         }
           System.out.print("\n");
     }*/
