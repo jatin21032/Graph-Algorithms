@@ -1,6 +1,14 @@
 public class Vertices {
     int nodeID;
-    Vertices(int n){
-        this.nodeID = n;
+    Vertices( ){
+       
     }
+    public void setNodeID(int n){
+     this.nodeID=n;
+    }
+    public int getNodeID(){
+        return this.nodeID;
+    }
+    
+    
 }

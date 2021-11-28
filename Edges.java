@@ -1,13 +1,27 @@
 public class Edges extends Vertices{
-int start;
-int end;
-int weight;
+Vertices start;
+Vertices end;
+int weight=0;
 
-Edges(int start, int end , int weight){
-    super(weight);
+Edges(Vertices start, Vertices end ){
+    super();
     this.start = start;
     this.end = end;
-    this.weight = weight;
+    this.weight = 0;
+}
+
+public Vertices  getNodefromID(int id) {
+    if(start.nodeID == id){
+      return start;
+    }else{
+        return end;
+    }
+    
+}
+
+public void  createEdge(){
+  
+   this.weight=1;
 }
 
 }
