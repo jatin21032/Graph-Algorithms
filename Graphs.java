@@ -33,6 +33,13 @@ public class Graphs {
         BFSTraversal trv = new BFSTraversal();
         out = trv.Traversal(gr.matrixGraph());
         System.out.println("BFS Traveral of Graph "+out);
+        
+        String fileName = "C:\\Users\\HP\\Dropbox\\PC\\Documents\\IIITD\\FIRST_SEM\\OOPD\\Project\\output\\BFS.txt";
+        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+        writer.write(out.toString());
+        
+        writer.close();
+
         APSP apsp = new APSP();
         //apsp.floydWarshall(gr.matrixGraph());
     }

@@ -1,9 +1,11 @@
 import java.util.ArrayList;
-
-public class BFSTraversal {
+interface Traversal {
+    ArrayList<Integer> Traversal(Edges[][] e);
+}
+public class BFSTraversal implements Traversal {
     //Vertices startVertex;
 
-    
+    @Override
     public ArrayList<Integer> Traversal(Edges[][] AdjMatrix ){
 
     ArrayList<Integer> outputlist = new ArrayList<Integer>();
@@ -53,4 +55,9 @@ public class BFSTraversal {
     }
     return outputlist;
  }
+
+    
+
+    
+   
 }
