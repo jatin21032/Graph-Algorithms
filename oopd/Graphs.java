@@ -1,5 +1,6 @@
 /**This file is the main file of our project. This file helps in constructing the graph in the form of adjacency matrix. 
- * Also this file taken input from file and write into the file at the specified location
+ * Also this file taken input from file and write into the file at the specified location.
+ * This file features the concept of RUN-TIME PLOYMORPHISM by calling child's methods on parent object.
  */
 package oopd;
 import java.io.*;
@@ -62,7 +63,8 @@ public class Graphs {
                 System.out.println("no of vertices in graph  " + filename[i] + " : " + noOfVertices);
                 System.out.println("no of edges in graph  " + filename[i] + ": " + raw_graph.size());
 
-                //Creating objects of various classes and fetching corresponding outputs
+                //Creating objects of various classes and fetching corresponding outputs by calling the child child function using parent class object
+                //implementing run-time PLOYMORPHISM here.
                 Traversal trv = new BFSTraversal();
                 Traversal trvs = new DFSTraversal();
                 APSP apsp = new APSP();
