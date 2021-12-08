@@ -22,9 +22,9 @@ public class Graphs {
 
         //splitting the data for all rows of db i.e. number of input file we have
         String[] filename = filenames.split("   ");
-
+       
         //for each file
-        for (int i = 0; i < filename.length - 1; i++) {
+        for (int i = 0; i < filename.length ; i++) {
 
             //Reading from file and storing into data structure for further ease of processing
             String inputPath = "C:/Users/HP/Dropbox/PC/Documents/IIITD/FIRST_SEM/OOPD/Project/data/";

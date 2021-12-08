@@ -2,6 +2,7 @@
  * This class features INHERITANCE(Single level) between two classes
  */
 package oopd;
+//Class extending Vertex class (INHERITANCE)
 public class Edges extends Vertices {
     Vertices start;
     Vertices end;
