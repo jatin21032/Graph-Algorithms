@@ -1,5 +1,5 @@
 /**This Class represent the Edges class where we are inheriting the Vertices class. We are using functions and properties of Vertices class through this.
- * 
+ * This class features INHERITANCE(Single level) between two classes
  */
 package oopd;
 public class Edges extends Vertices {
@@ -15,13 +15,13 @@ public class Edges extends Vertices {
         this.weight = 0;
     }
 
-    //Function to get Vertex from NodeID specified. 
-    //Here we are using the function getNodeID from the VErtices class
-    public Vertices getNodefromID(int id) {
+    //Function to get Vertex of NodeID specified. 
+    //Here we are overriding the function from the Vertices class
+    public int getNodefromID(int id) {
         if (start.getNodeID() == id) {
-            return start;
+            return start.getNodeID();
         } else {
-            return end;
+            return end.getNodeID();
         }
 
     }

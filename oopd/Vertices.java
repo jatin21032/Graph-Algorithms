@@ -13,6 +13,8 @@ public class Vertices {
     public int getNodeID() {
         return this.nodeID;
     }
-
-
+    //Return vertex of id specified
+    public int getNodefromID(int n){
+        return this.nodeID;
+    }
 }

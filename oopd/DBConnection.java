@@ -40,7 +40,7 @@ public class DBConnection {
             statement.setString(2, value2);
             int row = statement.executeUpdate();
             if (row > 0) {
-                System.out.println("Outfile inserted into db");
+                System.out.println("output file path for file "+value2+" inserted into db");
             }
         } catch (SQLException s) {}
     }

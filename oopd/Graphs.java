@@ -1,6 +1,6 @@
 /**This file is the main file of our project. This file helps in constructing the graph in the form of adjacency matrix. 
  * Also this file taken input from file and write into the file at the specified location.
- * This file features the concept of RUN-TIME PLOYMORPHISM by calling child's methods on parent object.
+ * This file features the concept of RUN-TIME POLYMORPHISM by calling child's methods on parent object.
  */
 package oopd;
 import java.io.*;
@@ -97,17 +97,28 @@ public class Graphs {
                     //Write APSP file
                     String outfileNameAPSP = "/APSP_Output.txt";
                     outfileNameAPSP = outputPath + outfileNameAPSP;
-                    writer = new BufferedWriter(new FileWriter(outfileNameAPSP));
-                    writer.write(apspOutput.toString(), 0, 2000);
-
+                    StringBuilder builder = new StringBuilder();
+                    for (int a=0;a<noOfVertices;a++){
+                        for(int b=0;b<noOfVertices;b++){
+                            if(apspOutput[a][b]!=999999)
+                                builder.append(apspOutput[a][b]+" ");
+                            else
+                                builder.append("INF"+" ");
+                        }
+                        builder.append("\n");
+                    }
+                    BufferedWriter writer2 = new BufferedWriter(new FileWriter(outfileNameAPSP));
+                    writer2.write(builder.toString());
+                    writer2.close();
 
                 } else {
-                    System.out.println("Error while creating folder!!");
+                    System.out.println("Folder Already Exists!!");
                 }
             } catch (Exception e) {
                 System.out.println("Error while writing file!!" + e);
             } finally {
                 br.close();
+                
             }
 
         }
